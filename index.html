@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ê-Bot Clinical | Secretária virtual para clínicas e hospitais</title>
+  <meta name="description" content="Automatize agendamentos, confirmações, triagem, recepção e comunicação com pacientes via IA para clínicas, hospitais e unidades de saúde.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/clinical-lp.css">
+</head>
+<body class="clinical-page" style="--primary: #2B9FE8; --primary-hover: #1a7ebc; --primary-light: rgba(43, 159, 232, 0.1);">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="glass-header clinical-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="#inicio" aria-label="Ê-Bot Clinical" class="brand-link">
+          <img src="./assets/images/logos_ebot/ebot_clinical/SVG/Logo_clinical_aplicação_1_black.svg" alt="Ê-Bot Clinical">
+        </a>
+      </div>
+
+      <nav class="nav-menu flex" aria-label="Menu principal">
+        <ul class="flex gap-lg">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#fluxo">Fluxo</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#seguranca">Segurança</a></li>
+          <li><a href="#demo">Demo IA</a></li>
+        </ul>
+      </nav>
+
+      <div class="desktop-cta">
+        <button class="trigger-wa-modal btn btn-primary wa-button">Agendar demonstração</button>
+      </div>
+      <button class="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section id="inicio" class="section clinical-hero bg-grid-pattern">
+      <div class="container grid grid-2 items-center hero-split clinical-hero-grid">
+        <div class="reveal reveal-left">
+          <span class="badge clinical-badge">Para clínicas, hospitais e unidades públicas</span>
+          <h1 class="h1">Atendimento em saúde com IA antes, durante e depois da consulta.</h1>
+          <p class="body-large hero-copy">O Ê-Bot Clinical automatiza agendamentos, confirmações, orientações, triagem inicial e lembretes via WhatsApp, sem tirar o controle da equipe de recepção.</p>
+          <div class="hero-actions">
+            <button class="trigger-wa-modal btn btn-primary wa-button">Falar com especialista de saúde</button>
+            <a class="clinical-link" href="#fluxo">Ver como funciona</a>
+          </div>
+          <div class="hero-proof" aria-label="Indicadores do Ê-Bot Clinical">
+            <span><strong>24/7</strong> respostas ao paciente</span>
+            <span><strong>-18%</strong> faltas em agenda</span>
+            <span><strong>48h</strong> setup inicial</span>
+          </div>
+        </div>
+
+        <div class="reveal reveal-right clinical-hero-visual" aria-label="Simulação de atendimento via chat">
+          <div class="phone-orbit" aria-hidden="true"></div>
+          <div class="clinical-phone float-hover">
+            <div class="phone-side-button phone-side-button-left"></div>
+            <div class="phone-side-button phone-side-button-right"></div>
+            <div class="phone-notch"><span></span></div>
+            <div class="phone-screen">
+              <div class="phone-status">
+                <span>09:41</span>
+                <span class="phone-signal">●●●</span>
+              </div>
+              <div class="phone-chat-header">
+                <img src="./assets/images/logos_ebot/ebot_clinical/SVG/Icone_clinical_aplicação_1.svg" alt="">
+                <div>
+                  <strong>Agendamentos Ativos</strong>
+                  <span>Ê-Bot Clinical online</span>
+                </div>
+              </div>
+              <div class="phone-chat-body">
+                <div class="phone-chat-track">
+                  <div class="phone-typing type-1"><span></span><span></span><span></span></div>
+                  <div class="phone-message bot msg-1">Olá, Ana. Sua consulta com a Dra. Helena está disponível amanhã às 14h20. Posso confirmar?</div>
+                  <div class="phone-typing user-typing type-2"><span></span><span></span><span></span></div>
+                  <div class="phone-message user msg-2">Pode confirmar.</div>
+                  <div class="phone-typing type-3"><span></span><span></span><span></span></div>
+                  <div class="phone-message bot msg-3">Consulta confirmada. Quer receber as orientações de preparo?</div>
+                  <div class="phone-typing user-typing type-4"><span></span><span></span><span></span></div>
+                  <div class="phone-message user msg-4">Sim, por favor.</div>
+                  <div class="phone-typing type-5"><span></span><span></span><span></span></div>
+                  <div class="phone-message bot msg-5">Perfeito. Envie seus documentos 15 min antes e evite jejum se não foi solicitado.</div>
+                </div>
+              </div>
+              <div class="phone-input-bar">
+                <span>Mensagem</span>
+                <strong>↗</strong>
+              </div>
+            </div>
+          </div>
+          <div class="mac-mouse-pointer" aria-hidden="true">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problema" class="section section-gray clinical-problem">
+      <div class="container reveal">
+        <div class="section-heading split-heading">
+          <div>
+            <span class="text-micro text-primary">Gargalo operacional</span>
+            <h2 class="h2">A recepção não deveria ser o ponto fraco da experiência do paciente.</h2>
+          </div>
+          <p class="body-large">Quando telefone, WhatsApp, agenda médica e financeiro operam separados, a equipe perde tempo em tarefas repetidas e o paciente espera por respostas simples.</p>
+        </div>
+
+        <div class="clinical-pain-grid">
+          <article class="glass-card clinical-pain-card">
+            <span class="pain-index">01</span>
+            <h3>Telefone sempre ocupado</h3>
+            <p>Pacientes ligam para confirmar horário, cancelar consulta, pedir preparo de exame e tirar dúvidas que poderiam ser resolvidas automaticamente.</p>
+          </article>
+          <article class="glass-card clinical-pain-card featured">
+            <span class="pain-index">02</span>
+            <h3>No-show sem previsibilidade</h3>
+            <p>Sem lembretes e confirmação ativa, a agenda parece cheia no sistema, mas chega vazia no consultório.</p>
+          </article>
+          <article class="glass-card clinical-pain-card">
+            <span class="pain-index">03</span>
+            <h3>Dados dispersos</h3>
+            <p>Atendentes precisam procurar histórico, convênio, profissional, agenda e status financeiro antes de dar uma resposta segura.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="fluxo" class="section section-light clinical-flow-section">
+      <div class="container reveal">
+        <div class="section-heading text-center compact-heading">
+          <span class="text-micro text-primary">Fluxo completo</span>
+          <h2 class="h2">Da primeira mensagem à sala de atendimento.</h2>
+          <p class="body-large">O paciente conversa no canal que já usa. O Ê-Bot consulta regras, agenda, disponibilidade e histórico para resolver ou encaminhar com contexto.</p>
+        </div>
+
+        <div class="flow-rail">
+          <article class="flow-step">
+            <span>1</span>
+            <h3>Identifica intenção</h3>
+            <p>Agendar, remarcar, confirmar, pedir receita, consultar preparo ou falar com humano.</p>
+          </article>
+          <article class="flow-step">
+            <span>2</span>
+            <h3>Consulta regras</h3>
+            <p>Valida convênio, especialidade, agenda médica, documentos e políticas da unidade.</p>
+          </article>
+          <article class="flow-step">
+            <span>3</span>
+            <h3>Executa a ação</h3>
+            <p>Confirma horário, envia orientação, abre solicitação ou entrega o caso para a recepção.</p>
+          </article>
+          <article class="flow-step">
+            <span>4</span>
+            <h3>Acompanha depois</h3>
+            <p>Lembra o paciente, mede satisfação e reduz faltas com mensagens no momento certo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light chart-container clinical-metrics">
+      <div class="container reveal text-center">
+        <span class="text-micro text-primary">Impacto mensurável</span>
+        <h2 class="h2">Benefícios comprovados na operação de saúde.</h2>
+        <div class="grid grid-4 metric-grid">
+          <div class="glass-card metric-card stagger-1">
+            <h3 class="h1 text-primary counter-value" data-end="50" data-prefix="-" data-suffix="%">0</h3>
+            <p class="text-small metric-title">tempo médio de espera</p>
+            <p class="text-small">Pacientes chegam com confirmação e orientação prontas.</p>
+          </div>
+          <div class="glass-card metric-card stagger-2">
+            <h3 class="h1 text-primary counter-value" data-end="18" data-prefix="-" data-suffix="%">0</h3>
+            <p class="text-small metric-title">faltas em consulta</p>
+            <p class="text-small">Lembretes e confirmação ativa antes do horário.</p>
+          </div>
+          <div class="glass-card metric-card stagger-3">
+            <h3 class="h1 text-primary counter-value" data-end="87" data-prefix="+" data-suffix="%">0</h3>
+            <p class="text-small metric-title">confirmações antecipadas</p>
+            <p class="text-small">Mais previsibilidade para médicos e recepção.</p>
+          </div>
+          <div class="glass-card metric-card stagger-4">
+            <h3 class="h1 text-primary counter-value" data-end="24" data-prefix="" data-suffix="h">0</h3>
+            <p class="text-small metric-title">atendimento contínuo</p>
+            <p class="text-small">Mesmo fora do expediente, sem sobrecarregar equipe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recursos" class="section section-gray clinical-ecosystem">
+      <div class="container reveal">
+        <div class="section-heading split-heading">
+          <div>
+            <span class="text-micro text-primary">Ecossistema Clinical</span>
+            <h2 class="h2">Uma camada inteligente entre paciente, equipe e sistema da clínica.</h2>
+          </div>
+          <p class="body-large">Você escolhe o que automatizar. O Ê-Bot pode começar por agendamentos e evoluir para triagem, receitas, financeiro e painel de gestão.</p>
+        </div>
+
+        <div class="resource-mosaic">
+          <article class="resource-card resource-schedule large">
+            <span>01</span>
+            <h3>Agendamento inteligente</h3>
+            <p>Sincronização com disponibilidade real para marcar, remarcar e cancelar consultas com regras da unidade.</p>
+            <div class="resource-visual schedule-visual" aria-hidden="true"><i></i><i></i><i></i><strong></strong></div>
+          </article>
+          <article class="resource-card resource-triage">
+            <span>02</span>
+            <h3>Triagem inicial</h3>
+            <p>Coleta sintomas, prioridade e especialidade antes do atendimento humano.</p>
+            <div class="resource-visual triage-visual" aria-hidden="true"><i></i><i></i><i></i></div>
+          </article>
+          <article class="resource-card resource-reminder dark">
+            <span>03</span>
+            <h3>Lembretes antifalta</h3>
+            <p>Confirma presença, envia preparo e libera horários quando há cancelamento.</p>
+            <div class="resource-visual reminder-visual" aria-hidden="true"><i></i><i></i><strong></strong></div>
+          </article>
+          <article class="resource-card resource-docs">
+            <span>04</span>
+            <h3>Receitas e documentos</h3>
+            <p>Organiza solicitações de renovação, exames, anexos e orientações.</p>
+            <div class="resource-visual docs-visual" aria-hidden="true"><i></i><i></i><i></i></div>
+          </article>
+          <article class="resource-card resource-panel wide">
+            <span>05</span>
+            <h3>Painel gerencial</h3>
+            <p>Acompanhe volume de conversas, motivos de contato, taxa de confirmação, horários críticos e demandas transferidas para humanos.</p>
+            <div class="resource-visual panel-visual" aria-hidden="true"><i></i><i></i><i></i><strong></strong></div>
+          </article>
+          <article class="resource-card resource-human">
+            <span>06</span>
+            <h3>Atendimento híbrido</h3>
+            <p>Quando precisa de humano, a conversa chega resumida e com contexto.</p>
+            <div class="resource-visual human-visual" aria-hidden="true"><i></i><i></i><strong></strong></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="seguranca" class="section section-dark bg-grid-pattern-dark security-section">
+      <div class="container reveal security-grid">
+        <div>
+          <span class="text-micro">Segurança e operação</span>
+          <h2 class="h2">Projetado para ambientes com dados sensíveis.</h2>
+          <p class="body-large">O Ê-Bot Clinical atua como uma camada controlada de atendimento, com registros, regras de encaminhamento e integração sob medida com a realidade da unidade.</p>
+        </div>
+        <div class="security-list">
+          <div><i class="security-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.4-2.8 8.4-7 10-4.2-1.6-7-5.6-7-10V6l7-3z"/><path d="M9.5 12l1.7 1.7 3.8-4"/></svg></i><strong>LGPD na jornada</strong><span>Consentimento, finalidade clara e rastreabilidade nas interações.</span></div>
+          <div><i class="security-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 7h10v10H7z"/><path d="M4 12h3M17 12h3M12 4v3M12 17v3M5.8 5.8l2.1 2.1M16.1 16.1l2.1 2.1M18.2 5.8l-2.1 2.1M7.9 16.1l-2.1 2.1"/></svg></i><strong>Integrações por etapa</strong><span>Agenda, CRM, ERP, prontuário, sistemas internos e APIs existentes.</span></div>
+          <div><i class="security-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M17.5 10.5l2 2 3-4"/></svg></i><strong>Escalonamento humano</strong><span>Casos sensíveis, dúvidas clínicas e exceções saem da automação.</span></div>
+          <div><i class="security-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h9l3 3v13H6z"/><path d="M15 4v4h4M9 12h6M9 16h4"/></svg></i><strong>Base de conhecimento</strong><span>Respostas seguem protocolos, horários, convênios e políticas da clínica.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light rollout-section">
+      <div class="container reveal">
+        <div class="section-heading text-center compact-heading">
+          <span class="text-micro text-primary">Implantação</span>
+          <h2 class="h2">Comece pequeno, evolua com dados reais.</h2>
+          <p class="body-large">A implantação é pensada para não travar a rotina da recepção.</p>
+        </div>
+        <div class="rollout-grid">
+          <article><i class="rollout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M17 14l3 3-3 3"/></svg></i><span>Semana 1</span><h3>Mapeamento</h3><p>Levantamos canais, dúvidas frequentes, agenda, regras e pontos de transferência para humanos.</p></article>
+          <article><i class="rollout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M19.8 7.5L17.2 9M6.8 15l-2.6 1.5"/><circle cx="12" cy="12" r="4"/></svg></i><span>Semana 2</span><h3>Configuração</h3><p>Montamos fluxos, tom de voz, base de conhecimento e integrações prioritárias.</p></article>
+          <article><i class="rollout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 19h14"/><path d="M7 19V5h10v14"/><path d="M10 9h4M10 13h4"/><path d="M17 8h2v4h-2"/></svg></i><span>Semana 3</span><h3>Piloto assistido</h3><p>Ativamos um fluxo controlado, monitoramos conversas e ajustamos respostas.</p></article>
+          <article><i class="rollout-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-4 3 2 5-7"/><path d="M18 6h1v5"/></svg></i><span>Contínuo</span><h3>Otimização</h3><p>Relatórios mostram gargalos, horários críticos e novas automações recomendadas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="section chat-section chat-clinical demo-section">
+      <div class="chat-bg-grid"></div>
+      <div class="chat-flashlight"></div>
+      <div class="container reveal">
+        <div class="section-heading text-center compact-heading">
+          <span class="text-micro text-primary">Demo interativa</span>
+          <h2 class="h2">Teste a IA na prática.</h2>
+          <p class="body-large">Converse com o Ê-Bot Clinical e veja como ele explica automações, agenda, lembretes e implantação para a sua operação.</p>
+        </div>
+
+        <div class="chat-container glassmorphism" data-bot-name="Ê-Bot Clinical" data-system-prompt="Você é o Ê-Bot, um assistente virtual especialista no Ê-Bot Clinical. Ajude gestores de clínicas e hospitais a entenderem como modernizamos atendimento, reduzimos filas, automatizamos agendamentos, renovamos receitas e diminuímos faltas de pacientes. Seja profissional, empático e objetivo." style="max-width: 800px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid rgba(43, 159, 232, 0.2); background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; height: 600px;">
+          <div class="demo-chat-header">
+            <div class="demo-avatar">
+              <img src="./assets/images/logos_ebot/ebot_clinical/SVG/Icone_clinical_aplicação_1.svg" alt="">
+            </div>
+            <div>
+              <h3>Ê-Bot Clinical</h3>
+              <p>Online agora</p>
+            </div>
+          </div>
+
+          <div id="chat-messages" class="demo-chat-body">
+            <div class="demo-message-row">
+              <div class="demo-message-icon"><img src="./assets/images/logos_ebot/ebot_clinical/SVG/Icone_clinical_aplicação_1.svg" alt=""></div>
+              <div class="demo-message">Olá! Sou o Ê-Bot Clinical. Posso mostrar como reduzir faltas, automatizar agendamentos ou organizar a recepção da sua clínica.</div>
+            </div>
+          </div>
+
+          <div class="demo-chat-input">
+            <input type="text" id="chat-input" placeholder="Ex: Como reduzir as faltas dos pacientes?">
+            <button id="chat-send" aria-label="Enviar mensagem">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
+          <div class="demo-chat-count">Interações gratuitas restantes: <span id="chat-count">10</span>/10</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark bg-grid-pattern-dark final-cta-restored">
+      <div class="container reveal">
+        <div class="final-cta-container">
+          <div class="final-cta-content">
+            <h2 class="h1">Pronto para modernizar a saúde?</h2>
+            <p class="body-large">Da Unidade Básica de Saúde ao hospital particular. Reduza filas, faltas e custos administrativos sem trocar toda a sua operação.</p>
+            <div class="cta-button-wrapper">
+              <button class="trigger-wa-modal btn btn-primary float-hover final-button">Falar com especialista</button>
+              <div class="text-small">Orçamento personalizado • Setup em 48h • Suporte dedicado</div>
+            </div>
+          </div>
+
+          <div class="final-cta-robot">
+            <div class="robot-icon-container float-hover">
+              <img src="./assets/images/logos_ebot/ebot_clinical/SVG/Icone_clinical_aplicação_1.svg" alt="" class="pulse-layer">
+              <img src="./assets/images/logos_ebot/ebot_clinical/SVG/Icone_clinical_aplicação_1.svg" alt="" class="pulse-layer pulse-layer-2">
+              <img src="./assets/images/logos_ebot/ebot_clinical/SVG/Icone_clinical_aplicação_1.svg" alt="Ê-Bot Clinical">
+            </div>
+            <div class="restored-wa-stack" aria-hidden="true">
+              <div class="restored-wa-bubble bubble-a">Posso confirmar os pacientes de amanhã?</div>
+              <div class="restored-wa-bubble bubble-b">Agenda atualizada com 87% de confirmações.</div>
+              <div class="restored-wa-bubble bubble-c">3 encaixes liberados para a recepção.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="clinical-footer-restored">
+    <div class="container">
+      <div class="footer-restored-grid">
+        <div class="footer-brand-block">
+          <img src="assets/images/esistemas_logo.avif" alt="Ê-Sistemas Corporativo">
+          <p class="text-small">Transformando tecnologia em conexões reais através de inteligência artificial focada em eficiência, resultados e humanização.</p>
+        </div>
+
+        <div>
+          <h4>Ê-Bot Clinical</h4>
+          <ul class="text-small">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#fluxo">Fluxo de atendimento</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#demo">Demo IA</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Operação</h4>
+          <ul class="text-small">
+            <li><a href="#problema">Dores resolvidas</a></li>
+            <li><a href="#seguranca">Segurança e LGPD</a></li>
+            <li><a href="#demo">Teste a IA</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contato</h4>
+          <ul class="text-small">
+            <li><button class="trigger-wa-modal">Agendar demonstração</button></li>
+            <li><span>(46) 99913-0505</span></li>
+            <li><span>comercial.ebot@esistemas.dev.br</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-restored-bottom">
+        <div>&copy; 2024-2025 Ê-Sistemas. Todos os direitos reservados.</div>
+        <div>
+          <span>Ê-Bot Clinical</span>
+          <span>IA para atendimento em saúde</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/env-config.js"></script>
+  <script src="js/chat-widget.js?v=5"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/scroll-animations.js"></script>
+  <script src="js/charts-animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
