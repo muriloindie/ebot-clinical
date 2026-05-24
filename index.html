@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ê-Bot Clinical | Secretária virtual para clínicas e hospitais</title>
   <meta name="description" content="Automatize agendamentos, confirmações, triagem, recepção e comunicação com pacientes via IA para clínicas, hospitais e unidades de saúde.">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/typography.css">
@@ -52,8 +54,8 @@
       <div class="container grid grid-2 items-center hero-split clinical-hero-grid">
         <div class="reveal reveal-left">
           <span class="badge clinical-badge">Para clínicas, hospitais e unidades públicas</span>
-          <h1 class="h1">Atendimento em saúde com IA antes, durante e depois da consulta.</h1>
-          <p class="body-large hero-copy">O Ê-Bot Clinical automatiza agendamentos, confirmações, orientações, triagem inicial e lembretes via WhatsApp, sem tirar o controle da equipe de recepção.</p>
+          <h1 class="h1">Sua clínica ainda perde pacientes por demora no WhatsApp?</h1>
+          <p class="body-large hero-copy"><strong>O Ê-Bot Clinical resolve.</strong> Automatize agendamentos, confirmações, orientações, triagem inicial e lembretes com IA para clínicas públicas, clínicas privadas, hospitais e unidades de saúde, sem tirar o controle da equipe de recepção.</p>
           <div class="hero-actions">
             <button class="trigger-wa-modal btn btn-primary wa-button">Falar com especialista de saúde</button>
             <a class="clinical-link" href="#fluxo">Ver como funciona</a>
@@ -68,6 +70,9 @@
         <div class="reveal reveal-right clinical-hero-visual" aria-label="Simulação de atendimento via chat">
           <div class="phone-orbit" aria-hidden="true"></div>
           <div class="clinical-phone float-hover">
+            <div class="hero-phone-wa-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.28 14.3c-.22.61-1.28 1.15-1.78 1.22-.43.06-1.02.13-3.23-.79-2.66-1.11-4.38-3.83-4.52-4.01-.13-.19-1.08-1.44-1.08-2.75 0-1.31.68-1.95.92-2.22.24-.26.52-.33.69-.33.17 0 .34 0 .49.01.16.01.37-.06.57.43.21.5.73 1.77.79 1.9.06.13.1.28.01.47-.08.19-.13.31-.26.46-.13.15-.28.33-.39.46-.13.14-.27.29-.12.56.15.26.68 1.13 1.46 1.83.99.9 1.84 1.18 2.1 1.31.26.13.41.11.56-.06.15-.17.65-.75.82-1.01.17-.26.34-.22.58-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.06.11.06.64-.16 1.25z"/></svg>
+            </div>
             <div class="phone-side-button phone-side-button-left"></div>
             <div class="phone-side-button phone-side-button-right"></div>
             <div class="phone-notch"><span></span></div>
@@ -95,6 +100,8 @@
                   <div class="phone-message user msg-4">Sim, por favor.</div>
                   <div class="phone-typing type-5"><span></span><span></span><span></span></div>
                   <div class="phone-message bot msg-5">Perfeito. Envie seus documentos 15 min antes e evite jejum se não foi solicitado.</div>
+                  <div class="phone-typing user-typing type-6"><span></span><span></span><span></span></div>
+                  <div class="phone-message user msg-6">Combinado, obrigado 😊</div>
                 </div>
               </div>
               <div class="phone-input-bar">
@@ -112,7 +119,7 @@
 
     <section id="problema" class="section section-gray clinical-problem">
       <div class="container reveal">
-        <div class="section-heading split-heading">
+        <div class="section-heading stacked-heading">
           <div>
             <span class="text-micro text-primary">Gargalo operacional</span>
             <h2 class="h2">A recepção não deveria ser o ponto fraco da experiência do paciente.</h2>
@@ -128,7 +135,7 @@
           </article>
           <article class="glass-card clinical-pain-card featured">
             <span class="pain-index">02</span>
-            <h3>No-show sem previsibilidade</h3>
+            <h3>Absenteismo sem previsibilidade</h3>
             <p>Sem lembretes e confirmação ativa, a agenda parece cheia no sistema, mas chega vazia no consultório.</p>
           </article>
           <article class="glass-card clinical-pain-card">
@@ -173,7 +180,7 @@
       </div>
     </section>
 
-    <section class="section section-light chart-container clinical-metrics">
+    <section class="section section-light chart-container clinical-metrics bg-grid-pattern">
       <div class="container reveal text-center">
         <span class="text-micro text-primary">Impacto mensurável</span>
         <h2 class="h2">Benefícios comprovados na operação de saúde.</h2>
@@ -204,10 +211,10 @@
 
     <section id="recursos" class="section section-gray clinical-ecosystem">
       <div class="container reveal">
-        <div class="section-heading split-heading">
+        <div class="section-heading stacked-heading">
           <div>
             <span class="text-micro text-primary">Ecossistema Clinical</span>
-            <h2 class="h2">Uma camada inteligente entre paciente, equipe e sistema da clínica.</h2>
+            <h2 class="h2">Um canal inteligente entre paciente, equipe e sistema da clínica.</h2>
           </div>
           <p class="body-large">Você escolhe o que automatizar. O Ê-Bot pode começar por agendamentos e evoluir para triagem, receitas, financeiro e painel de gestão.</p>
         </div>
@@ -217,7 +224,15 @@
             <span>01</span>
             <h3>Agendamento inteligente</h3>
             <p>Sincronização com disponibilidade real para marcar, remarcar e cancelar consultas com regras da unidade.</p>
-            <div class="resource-visual schedule-visual" aria-hidden="true"><i></i><i></i><i></i><strong></strong></div>
+            <div class="resource-visual schedule-visual" aria-hidden="true">
+              <div class="schedule-calendar">
+                <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span>
+                <i></i><i></i><i></i><i></i>
+              </div>
+              <div class="schedule-flow-card"><strong>14:20</strong><span>Dra. Helena</span><em>Confirmado</em></div>
+              <div class="schedule-flow-card secondary"><strong>15:00</strong><span>Cardiologia</span><em>Encaixe livre</em></div>
+            </div>
+            <div class="human-photo-card human-photo-doctor" aria-label="Médica usando atendimento digital"></div>
           </article>
           <article class="resource-card resource-triage">
             <span>02</span>
@@ -226,10 +241,18 @@
             <div class="resource-visual triage-visual" aria-hidden="true"><i></i><i></i><i></i></div>
           </article>
           <article class="resource-card resource-reminder dark">
+            <div class="whatsapp-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.28 14.3c-.22.61-1.28 1.15-1.78 1.22-.43.06-1.02.13-3.23-.79-2.66-1.11-4.38-3.83-4.52-4.01-.13-.19-1.08-1.44-1.08-2.75 0-1.31.68-1.95.92-2.22.24-.26.52-.33.69-.33.17 0 .34 0 .49.01.16.01.37-.06.57.43.21.5.73 1.77.79 1.9.06.13.1.28.01.47-.08.19-.13.31-.26.46-.13.15-.28.33-.39.46-.13.14-.27.29-.12.56.15.26.68 1.13 1.46 1.83.99.9 1.84 1.18 2.1 1.31.26.13.41.11.56-.06.15-.17.65-.75.82-1.01.17-.26.34-.22.58-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.06.11.06.64-.16 1.25z"/></svg>
+            </div>
             <span>03</span>
             <h3>Lembretes antifalta</h3>
             <p>Confirma presença, envia preparo e libera horários quando há cancelamento.</p>
-            <div class="resource-visual reminder-visual" aria-hidden="true"><i></i><i></i><strong></strong></div>
+            <div class="resource-visual reminder-visual" aria-hidden="true">
+              <div class="reminder-phone-card"><span>Amanhã 14:20</span><strong>Consulta confirmada?</strong><em>Sim, vou comparecer</em></div>
+              <div class="reminder-status-line"><i></i><span>Preparo enviado</span></div>
+              <div class="reminder-status-line alt"><i></i><span>Horário liberado</span></div>
+              <strong></strong>
+            </div>
           </article>
           <article class="resource-card resource-docs">
             <span>04</span>
@@ -241,14 +264,105 @@
             <span>05</span>
             <h3>Painel gerencial</h3>
             <p>Acompanhe volume de conversas, motivos de contato, taxa de confirmação, horários críticos e demandas transferidas para humanos.</p>
-            <div class="resource-visual panel-visual" aria-hidden="true"><i></i><i></i><i></i><strong></strong></div>
+            <div class="resource-visual panel-visual" aria-hidden="true">
+              <div class="crm-topline"><span>Conversas hoje</span><strong>1.284</strong><em>+18%</em></div>
+              <div class="crm-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="crm-reasons"><span>Agendamento</span><strong></strong><span>Preparo</span><strong></strong><span>Financeiro</span><strong></strong></div>
+              <div class="crm-kpis"><span>87% confirmação</span><span>10h-12h crítico</span><span>42 para humano</span></div>
+            </div>
           </article>
           <article class="resource-card resource-human">
             <span>06</span>
             <h3>Atendimento híbrido</h3>
             <p>Quando precisa de humano, a conversa chega resumida e com contexto.</p>
-            <div class="resource-visual human-visual" aria-hidden="true"><i></i><i></i><strong></strong></div>
+            <div class="resource-visual human-visual" aria-hidden="true">
+              <div class="handoff-summary-card">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=220&q=80" alt="">
+                <div><strong>Ana P.</strong><span>Quer remarcar retorno e já enviou exames. Convênio validado. Prioridade: média.</span></div>
+              </div>
+            </div>
+            <div class="human-photo-card human-photo-patient" aria-label="Paciente em atendimento humanizado"></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes" class="section section-light audience-section">
+      <div class="container reveal">
+        <div class="section-heading stacked-heading">
+          <div>
+            <span class="text-micro text-primary">Clientes atendidos</span>
+            <h2 class="h2">Para clínicas públicas e privadas que precisam responder mais rápido.</h2>
+          </div>
+          <p class="body-large">O mesmo canal inteligente pode operar com regras diferentes por unidade, especialidade, convênio, fila, protocolo e perfil de paciente.</p>
+        </div>
+        <div class="audience-grid">
+          <article class="audience-card public-care">
+            <span>Clínicas públicas</span>
+            <h3>UBS, ambulatórios e unidades municipais</h3>
+            <p>Organize filas, confirme presença, envie orientações e reduza demanda repetitiva da recepção em serviços de alto volume.</p>
+          </article>
+          <article class="audience-card private-care">
+            <span>Clínicas privadas</span>
+            <h3>Consultórios, redes e hospitais particulares</h3>
+            <p>Aumente conversão de agendamentos, melhore experiência do paciente e mantenha o time focado em casos que exigem cuidado humano.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="parceiros" class="section section-gray partners-section">
+      <div class="container reveal">
+        <div class="section-heading text-center compact-heading">
+          <span class="text-micro text-primary">Clientes e parceiros</span>
+          <h2 class="h2">Criado para integrar tecnologia, atendimento e gestão em saúde.</h2>
+          <p class="body-large">O Ê-Bot Clinical conecta equipes internas, parceiros de tecnologia, sistemas de agenda, ERPs, CRMs e canais digitais em uma operação mais previsível.</p>
+        </div>
+        <div class="partners-strip" aria-label="Perfis de clientes e parceiros">
+          <article class="partner-card"><img src="https://images.unsplash.com/photo-1519494140681-8b17d830a3e9?auto=format&fit=crop&w=600&q=80" alt="Recepção de clínica médica"><span>Clínicas médicas</span></article>
+          <article class="partner-card"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80" alt="Consultório odontológico"><span>Clínicas odontológicas</span></article>
+          <article class="partner-card"><img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&q=80" alt="Corredor hospitalar moderno"><span>Hospitais</span></article>
+          <article class="partner-card"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Profissional de saúde em atendimento público"><span>Unidades públicas</span></article>
+          <article class="partner-card"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80" alt="Documentos e cartão de saúde"><span>Operadoras e convênios</span></article>
+          <article class="partner-card"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80" alt="Equipe de tecnologia integrando sistemas"><span>Integradores de sistemas</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="section section-light testimonials-section">
+      <div class="container reveal">
+        <div class="section-heading stacked-heading text-center compact-heading">
+          <div>
+            <span class="text-micro text-primary">Depoimentos</span>
+            <h2 class="h2">Gestores, médicos e recepções com uma rotina mais previsível.</h2>
+          </div>
+          <p class="body-large">Exemplos de relatos que mostram como a automação humanizada apoia clínicas de diferentes portes.</p>
+        </div>
+
+        <div class="swiper testimonials-swiper" aria-label="Carousel de depoimentos de clientes">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide testimonial-card">
+              <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=900&q=80" alt="Médica em clínica moderna">
+              <div><span>Clínica privada</span><p>“Reduzimos as ligações repetitivas e passamos a confirmar pacientes antes do início do expediente.”</p><strong>Dra. Marina Telles, diretora clínica</strong></div>
+            </article>
+            <article class="swiper-slide testimonial-card">
+              <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=900&q=80" alt="Médico em corredor hospitalar">
+              <div><span>Hospital regional</span><p>“O time recebe o histórico resumido e consegue priorizar casos que realmente precisam de atendimento humano.”</p><strong>Dr. Renato Azevedo, coordenação médica</strong></div>
+            </article>
+            <article class="swiper-slide testimonial-card">
+              <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=900&q=80" alt="Recepção de clínica com pacientes aguardando">
+              <div><span>Unidade pública</span><p>“A confirmação ativa ajudou a organizar a fila e diminuiu encaixes de última hora por falta de informação.”</p><strong>Camila Duarte, gestão de atendimento</strong></div>
+            </article>
+            <article class="swiper-slide testimonial-card">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=80" alt="Médico usando tablet no consultório">
+              <div><span>Rede de especialidades</span><p>“O WhatsApp virou um canal organizado, com regras claras e passagem segura para a recepção.”</p><strong>Dr. Paulo Meireles, sócio operador</strong></div>
+            </article>
+          </div>
+          <div class="testimonials-controls">
+            <button class="testimonial-prev" aria-label="Depoimento anterior">‹</button>
+            <div class="swiper-pagination"></div>
+            <button class="testimonial-next" aria-label="Próximo depoimento">›</button>
+          </div>
         </div>
       </div>
     </section>
@@ -259,6 +373,11 @@
           <span class="text-micro">Segurança e operação</span>
           <h2 class="h2">Projetado para ambientes com dados sensíveis.</h2>
           <p class="body-large">O Ê-Bot Clinical atua como uma camada controlada de atendimento, com registros, regras de encaminhamento e integração sob medida com a realidade da unidade.</p>
+          <p class="security-copy">A operação considera princípios da LGPD como finalidade, necessidade, transparência, segurança, prevenção e responsabilização. Conversas, consentimentos, bases de conhecimento e transferências para humanos podem ser estruturados para reduzir exposição de dados sensíveis e manter rastreabilidade operacional.</p>
+          <div class="security-actions">
+            <button class="btn btn-primary open-pdf-modal" data-pdf-title="LGPD" data-pdf-src="assets/pdf/ebot_LGPD.pdf">Ler LGPD</button>
+            <button class="btn btn-outline open-pdf-modal" data-pdf-title="Política de Privacidade" data-pdf-src="assets/pdf/ebot_politica_privacidade.pdf">Ler política de privacidade</button>
+          </div>
         </div>
         <div class="security-list">
           <div><i class="security-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.4-2.8 8.4-7 10-4.2-1.6-7-5.6-7-10V6l7-3z"/><path d="M9.5 12l1.7 1.7 3.8-4"/></svg></i><strong>LGPD na jornada</strong><span>Consentimento, finalidade clara e rastreabilidade nas interações.</span></div>
@@ -353,6 +472,11 @@
     </section>
   </main>
 
+  <a class="floating-whatsapp" href="https://wa.me/5546991130554?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20o%20%C3%8A-Bot%20Clinical" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.28 14.3c-.22.61-1.28 1.15-1.78 1.22-.43.06-1.02.13-3.23-.79-2.66-1.11-4.38-3.83-4.52-4.01-.13-.19-1.08-1.44-1.08-2.75 0-1.31.68-1.95.92-2.22.24-.26.52-.33.69-.33.17 0 .34 0 .49.01.16.01.37-.06.57.43.21.5.73 1.77.79 1.9.06.13.1.28.01.47-.08.19-.13.31-.26.46-.13.15-.28.33-.39.46-.13.14-.27.29-.12.56.15.26.68 1.13 1.46 1.83.99.9 1.84 1.18 2.1 1.31.26.13.41.11.56-.06.15-.17.65-.75.82-1.01.17-.26.34-.22.58-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.06.11.06.64-.16 1.25z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
   <footer class="clinical-footer-restored">
     <div class="container">
       <div class="footer-restored-grid">
@@ -367,16 +491,19 @@
             <li><a href="#inicio">Início</a></li>
             <li><a href="#fluxo">Fluxo de atendimento</a></li>
             <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
             <li><a href="#demo">Demo IA</a></li>
           </ul>
         </div>
 
         <div>
-          <h4>Operação</h4>
+          <h4>Produtos Ê-Bot</h4>
           <ul class="text-small">
-            <li><a href="#problema">Dores resolvidas</a></li>
-            <li><a href="#seguranca">Segurança e LGPD</a></li>
-            <li><a href="#demo">Teste a IA</a></li>
+            <li><a href="https://êbot.com" target="_blank" rel="noopener">Site oficial Ê-Bot</a></li>
+            <li><a href="https://êbot.com/produtos.html" target="_blank" rel="noopener">Ê-Bot Explorer</a></li>
+            <li><a href="https://êbot.com/produtos.html" target="_blank" rel="noopener">Ê-Bot API</a></li>
+            <li><a href="https://êbot.com/produtos.html" target="_blank" rel="noopener">Ê-Bot Dash</a></li>
           </ul>
         </div>
 
@@ -406,6 +533,7 @@
   <script src="js/navigation.js"></script>
   <script src="js/scroll-animations.js"></script>
   <script src="js/charts-animations.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

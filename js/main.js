@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Remove existing modals if any
   const existingModal = document.getElementById('waModal');
   if (existingModal) existingModal.remove();
+  const existingPdfModal = document.getElementById('pdfModal');
+  if (existingPdfModal) existingPdfModal.remove();
 
   // Inject WhatsApp Modal HTML dynamically
   const waModalHTML = `
@@ -24,8 +26,28 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.body.insertAdjacentHTML('beforeend', waModalHTML);
 
+  const pdfModalHTML = `
+    <div class="pdf-modal-overlay" id="pdfModal" aria-hidden="true">
+      <div class="pdf-modal-card" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+        <div class="pdf-modal-header">
+          <h3 id="pdfModalTitle">Documento</h3>
+          <div class="pdf-modal-actions">
+            <a class="btn btn-primary" id="pdfModalDownload" href="#" download>Baixar PDF</a>
+            <button class="pdf-modal-close" id="pdfModalClose" aria-label="Fechar modal">×</button>
+          </div>
+        </div>
+        <iframe class="pdf-modal-frame" id="pdfModalFrame" title="Leitor de PDF"></iframe>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', pdfModalHTML);
+
   const modal = document.getElementById('waModal');
   const card = document.getElementById('waModalCard');
+  const pdfModal = document.getElementById('pdfModal');
+  const pdfTitle = document.getElementById('pdfModalTitle');
+  const pdfFrame = document.getElementById('pdfModalFrame');
+  const pdfDownload = document.getElementById('pdfModalDownload');
 
   const openModal = () => {
     modal.style.pointerEvents = 'auto';
@@ -34,10 +56,54 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
   };
 
+  if (window.Swiper) {
+    new Swiper('.testimonials-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 22,
+      loop: true,
+      speed: 700,
+      autoplay: {
+        delay: 5200,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.testimonials-swiper .swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.testimonial-next',
+        prevEl: '.testimonial-prev',
+      },
+      breakpoints: {
+        980: {
+          slidesPerView: 1.35,
+          centeredSlides: true,
+        },
+      },
+    });
+  }
+
   const closeModal = () => {
     modal.style.pointerEvents = 'none';
     modal.classList.remove('active');
     card.style.transform = 'scale(0.9) translateY(20px)';
+    document.body.style.overflow = '';
+  };
+
+  const openPdfModal = (title, src) => {
+    pdfTitle.textContent = title;
+    pdfFrame.src = src;
+    pdfDownload.href = src;
+    pdfDownload.setAttribute('download', src.split('/').pop());
+    pdfModal.setAttribute('aria-hidden', 'false');
+    pdfModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closePdfModal = () => {
+    pdfModal.classList.remove('active');
+    pdfModal.setAttribute('aria-hidden', 'true');
+    pdfFrame.src = '';
     document.body.style.overflow = '';
   };
 
@@ -63,6 +129,12 @@ document.addEventListener('DOMContentLoaded', () => {
       
       openModal();
     }
+
+    const pdfTrigger = e.target.closest('.open-pdf-modal');
+    if (pdfTrigger) {
+      e.preventDefault();
+      openPdfModal(pdfTrigger.dataset.pdfTitle || 'Documento', pdfTrigger.dataset.pdfSrc);
+    }
     
     // Check if clicked element is close or continue button inside modal
     if (e.target.closest('#waModalClose') || e.target.closest('#waModalContinue')) {
@@ -73,12 +145,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === modal) {
       closeModal();
     }
+
+    if (e.target.closest('#pdfModalClose') || e.target === pdfModal) {
+      closePdfModal();
+    }
   });
   
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) {
       closeModal();
+    }
+    if (e.key === 'Escape' && pdfModal.classList.contains('active')) {
+      closePdfModal();
     }
   });
 });

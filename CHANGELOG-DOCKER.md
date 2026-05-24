@@ -63,16 +63,16 @@ git push
 Após ~2-5 minutos:
 - Container deve estar "healthy"
 - Site acessível via domínio
-- Logs devem mostrar "Starting nginx..."
+- Logs devem mostrar "Starting Caddy..."
 
 ## 🔍 Como Funciona
 
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ 1. Build da Imagem                                      │
-│    - Copia arquivos para /usr/share/nginx/html          │
+│    - Copia arquivos para /usr/share/caddy              │
 │    - Cria entrypoint script                             │
-│    - Configura nginx                                    │
+│    - Configura Caddy                                    │
 └─────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────┐
@@ -84,7 +84,7 @@ Após ~2-5 minutos:
 └─────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────┐
-│ 3. Nginx Inicia                                         │
+│ 3. Caddy Inicia                                         │
 │    - Escuta na porta 80 (interna)                       │
 │    - Serve arquivos de /usr/share/nginx/html            │
 │    - Healthcheck: wget http://localhost/                │
